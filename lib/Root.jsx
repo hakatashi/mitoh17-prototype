@@ -1,29 +1,48 @@
 const React = require('react');
 const CSSModules = require('react-css-modules');
 const Hammer = require('react-hammerjs');
+
 const styles = require('./Root.pcss');
+const ContextMenu = require('./ContextMenu.jsx');
 
 class Root extends React.Component {
 	constructor(props) {
 		super(props);
 
 		this.state = {
+			isMenuActive: false,
+			contextMenuPosition: {},
 		};
 	}
 
-	onTap = (event) => {
-		console.log(event);
+	activateContextMenu({x, y}) {
+		this.setState({
+			isMenuActive: true,
+			contextMenuPosition: {x, y},
+		});
+	}
+
+	onPress = (event) => {
+		this.activateContextMenu({
+			x: event.center.x,
+			y: event.center.y,
+		});
 	}
 
 	onContextMenu = (event) => {
 		event.preventDefault();
-		console.log(event);
+
+		this.activateContextMenu({
+			x: event.clientX,
+			y: event.clientY,
+		});
 	}
 
 	render() {
 		return (
-			<Hammer onTap={this.onTap} onContextMenu={this.onContextMenu}>
+			<Hammer onPress={this.onPress} onContextMenu={this.onContextMenu}>
 				<div styleName="root">
+					{this.state.isMenuActive && <ContextMenu position={this.state.contextMenuPosition}></ContextMenu>}
 				</div>
 			</Hammer>
 		);
