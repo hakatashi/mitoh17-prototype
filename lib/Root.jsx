@@ -1,5 +1,6 @@
 const React = require('react');
 const CSSModules = require('react-css-modules');
+const Hammer = require('react-hammerjs');
 const styles = require('./Root.pcss');
 
 class Root extends React.Component {
@@ -10,10 +11,21 @@ class Root extends React.Component {
 		};
 	}
 
+	onTap = (event) => {
+		console.log(event);
+	}
+
+	onContextMenu = (event) => {
+		event.preventDefault();
+		console.log(event);
+	}
+
 	render() {
 		return (
-			<div styleName="root">
-			</div>
+			<Hammer onTap={this.onTap} onContextMenu={this.onContextMenu}>
+				<div styleName="root">
+				</div>
+			</Hammer>
 		);
 	}
 }
