@@ -1,0 +1,11 @@
+{
+  "name": "mitoh17-prototype",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": {
+    "url": "https://github.com/hakatashi/mitoh17-prototype.git",
+    "type": "git"
+  },
+  "author": "Koki Takahashi <hakatasiloving@gmail.com> (https://hakatashi.com/)",
+  "license": "MIT"
+}
