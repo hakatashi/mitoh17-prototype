@@ -7,5 +7,25 @@
     "type": "git"
   },
   "author": "Koki Takahashi <hakatasiloving@gmail.com> (https://hakatashi.com/)",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "autoprefixer": "^6.7.3",
+    "babel-core": "^6.23.1",
+    "babel-loader": "^6.3.2",
+    "babel-plugin-transform-class-properties": "^6.23.0",
+    "babel-preset-es2015": "^6.22.0",
+    "babel-preset-react": "^6.23.0",
+    "css-loader": "^0.26.1",
+    "normalize.css": "^5.0.0",
+    "postcss-flexbugs-fixes": "^2.1.0",
+    "postcss-loader": "^1.3.1",
+    "precss": "^1.4.0",
+    "pug-cli": "^1.0.0-alpha6",
+    "react": "^15.4.2",
+    "react-css-modules": "^4.1.0",
+    "react-dom": "^15.4.2",
+    "style-loader": "^0.13.1",
+    "webpack": "^2.2.1",
+    "webpack-dev-server": "^2.4.0"
+  }
 }
