@@ -2,6 +2,10 @@
   "name": "mitoh17-prototype",
   "version": "1.0.0",
   "main": "index.js",
+  "scripts": {
+    "build": "npm run pug",
+    "pug": "pug index.pug"
+  },
   "repository": {
     "url": "https://github.com/hakatashi/mitoh17-prototype.git",
     "type": "git"
