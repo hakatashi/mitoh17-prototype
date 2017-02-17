@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "build": "npm run pug",
-    "pug": "pug index.pug"
+    "build": "concurrently \"npm run html\" \"npm run js\"",
+    "html": "pug index.pug",
+    "js": "webpack"
   },
   "repository": {
     "url": "https://github.com/hakatashi/mitoh17-prototype.git",
@@ -19,6 +20,7 @@
     "babel-plugin-transform-class-properties": "^6.23.0",
     "babel-preset-es2015": "^6.22.0",
     "babel-preset-react": "^6.23.0",
+    "concurrently": "^3.3.0",
     "css-loader": "^0.26.1",
     "normalize.css": "^5.0.0",
     "postcss-flexbugs-fixes": "^2.1.0",
