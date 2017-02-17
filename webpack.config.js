@@ -13,6 +13,13 @@ module.exports = {
 				presets: ['es2015', 'react'],
 				plugins: ['transform-class-properties'],
 			},
+		}, {
+			test: /\.pcss$/,
+			loaders: [
+				'style-loader?sourceMap',
+				'css-loader?modules&importLoaders=1',
+				'postcss-loader?sourceMap',
+			],
 		}],
 	},
 };
