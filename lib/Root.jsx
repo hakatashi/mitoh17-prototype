@@ -42,6 +42,7 @@ class Root extends React.Component {
 		return (
 			<Hammer onPress={this.onPress} onContextMenu={this.onContextMenu}>
 				<div styleName="root">
+					<h1 styleName="title">mitoh’17-prototype</h1>
 					{this.state.isMenuActive && <ContextMenu position={this.state.contextMenuPosition}></ContextMenu>}
 				</div>
 			</Hammer>
